@@ -1,0 +1,24 @@
+pipeline {
+	agent any 
+	stages {
+stage(‘Polling’) {
+	steps {
+		echo "Polling the Code From GitHub Repository"
+		git "https://github.com/Vigneshkv96/CICD.git"
+	}
+	}
+	stage (‘Test’) {
+	steps {
+		echo "Doing Functional testing on the Source Code"
+		bat 'python funcTesting.py'
+		
+	}
+	}
+	stage (‘Build’){
+	steps {
+	    echo "Building the Source Code"
+	    bat 'python src.py'  
+	}
+}
+}
+}
