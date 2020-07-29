@@ -10,7 +10,7 @@ stage(‘Polling’) {
 	stage (‘Test’) {
 	steps {
 		echo "Doing Functional testing on the Source Code"
-		sh 'funcTesting.py'
+		sh 'python funcTesting.py'
 		
 	}
 	}
