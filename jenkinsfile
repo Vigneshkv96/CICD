@@ -17,7 +17,9 @@ stage(‘Polling’) {
 	stage (‘Build’){
 	steps {
 	    echo "Building the Source Code"
-	    ./src.py  
+	    def task = "python src.py".execute()
+            task.waitFor()
+            println task.textsrc.py  
 	}
 }
 }
