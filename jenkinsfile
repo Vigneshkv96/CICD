@@ -17,7 +17,7 @@ stage(‘Polling’) {
 	stage (‘Build’){
 	steps {
 	    echo "Building the Source Code"
-	    sh python src.py
+	    sh 'python src.py'
 	}
 }
 }
