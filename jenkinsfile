@@ -10,14 +10,14 @@ stage(‘Polling’) {
 	stage (‘Test’) {
 	steps {
 		echo "Doing Functional testing on the Source Code"
-		sh 'python funcTesting.py'
+		bat 'python funcTesting.py'
 		
 	}
 	}
 	stage (‘Build’){
 	steps {
 	    echo "Building the Source Code"
-	    sh 'python src.py'
+	    bat 'python src.py'
 	}
 }
 }
